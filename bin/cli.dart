@@ -5,6 +5,9 @@ void main(List<String> arguments) {
     print('Hello, Dart!');
   } else if (arguments.first == 'version') {
     print('Dartpedia CLI version $version');
+  } else if (arguments.first == 'search') {
+    final inputArgs = arguments.length > 1 ? arguments.sublist(1) : null;
+    searchWikipedia(inputArgs);
   } else {
     printUsage();
   }
@@ -14,4 +17,8 @@ void printUsage() {
   print(
     "The following commands are valid: 'help', 'version', 'search <ARTICLE-TITLE>'",
   );
+}
+
+void searchWikipedia(List<String>? arguments) {
+  print('searchWikipedia received arguments: $arguments');
 }
