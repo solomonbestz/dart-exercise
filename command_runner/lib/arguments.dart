@@ -1,0 +1,4 @@
+
+
+enum OptionType {flag, option}
+
