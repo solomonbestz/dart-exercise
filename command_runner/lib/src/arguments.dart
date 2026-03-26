@@ -45,3 +45,8 @@ class Option extends Argument {
     return '--$name: $help';
   }
 }
+
+
+abstract class Command extends Argument {
+  
+}
