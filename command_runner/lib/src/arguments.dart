@@ -47,6 +47,8 @@ class Option extends Argument {
 }
 
 
+// Abstract class
 abstract class Command extends Argument {
   
 }
+
