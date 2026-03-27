@@ -1,4 +1,5 @@
 import 'package:command_runner/arguments.dart';
+import 'package:command_runner/command_runner.dart';
 
 abstract class Argument {
   String get name;
@@ -46,9 +47,14 @@ class Option extends Argument {
   }
 }
 
-
 // Abstract class
 abstract class Command extends Argument {
-  
-}
+  @override
+  String get name;
 
+  String get description;
+
+  bool get requiresArgument => false;
+
+  late CommandRunner runner;
+}
