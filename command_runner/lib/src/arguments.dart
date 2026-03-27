@@ -57,4 +57,13 @@ abstract class Command extends Argument {
   bool get requiresArgument => false;
 
   late CommandRunner runner;
+
+  @override
+  String? help;
+
+  @override
+  String? defaultValue;
+
+  @override
+  String? valueHelp;
 }
